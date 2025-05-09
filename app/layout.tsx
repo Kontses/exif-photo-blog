@@ -35,10 +35,6 @@ export const metadata: Metadata = {
     title: META_TITLE,
     description: META_DESCRIPTION,
   },
-  twitter: {
-    title: META_TITLE,
-    description: META_DESCRIPTION,
-  },
   icons: [{
     url: '/favicon.ico',
     rel: 'icon',
