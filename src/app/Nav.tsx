@@ -197,15 +197,15 @@ export default function Nav({
                     onEnded={handleNextTrack}
                   />
                   <button onClick={handlePreviousTrack} className="bg-transparent border-none p-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
-                    <FaStepBackward size={18} className="group-hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />
+                    <FaStepBackward size={18} className="group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />
                   </button>
                   <button onClick={togglePlayPause} className="bg-transparent border-none p-1 mx-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
                     {isPlaying ? 
-                      <FaPause size={18} className="group-hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" /> : 
-                      <FaPlay size={18} className="group-hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />}
+                      <FaPause size={18} className="group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" /> : 
+                      <FaPlay size={18} className="group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />}
                   </button>
                   <button onClick={handleNextTrack} className="bg-transparent border-none p-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
-                    <FaStepForward size={18} className="group-hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />
+                    <FaStepForward size={18} className="group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />
                   </button>
                   <div 
                     className="min-w-[100px] max-w-[200px] text-xs mx-2 hidden sm:block overflow-hidden text-ellipsis whitespace-nowrap hover:overflow-visible hover:whitespace-normal hover:bg-black/20 hover:p-1 hover:rounded transition-all duration-150"
@@ -215,8 +215,8 @@ export default function Nav({
                   </div>
                   <button onClick={toggleMute} className="bg-transparent border-none p-1 ml-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
                     {isMuted ? 
-                      <FaVolumeMute size={18} className="group-hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" /> : 
-                      <FaVolumeUp size={18} className="group-hover:drop-shadow-[0_0_8px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />}
+                      <FaVolumeMute size={18} className="group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" /> : 
+                      <FaVolumeUp size={18} className="group-hover:drop-shadow-[0_0_12px_rgba(56,189,248,0.85)] transition-all duration-150 ease-in-out" />}
                   </button>
                 </div>
               )}
@@ -232,8 +232,7 @@ export default function Nav({
                 {NAV_CAPTION &&
                   <div className={clsx(
                     'hidden sm:block truncate overflow-hidden',
-                    'leading-tight text-dim',
-                    'lowercase'
+                    'leading-tight text-dim'
                   )}>
                     {NAV_CAPTION}
                   </div>}
