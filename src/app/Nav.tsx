@@ -195,24 +195,28 @@ export default function Nav({
                   <audio
                     ref={audioRef}
                     onEnded={handleNextTrack}
-                    // src is now primarily managed by useEffect, but initial src can be set
-                    // defaultSrc={playlist[currentTrackIndex]?.src} // Not a standard prop, src is enough
                   />
-                  <button onClick={handlePreviousTrack} className="bg-transparent border-none p-1 focus:outline-none hover:text-cyan-300 transition-colors">
-                    <FaStepBackward size={18} /> {/* Slightly smaller icons */}
+                  <button onClick={handlePreviousTrack} className="bg-transparent border-none p-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
+                    <FaStepBackward size={18} className="group-hover:drop-shadow-[0_0_5px_rgba(56,189,248,0.7)] transition-all duration-150 ease-in-out" />
                   </button>
-                  <button onClick={togglePlayPause} className="bg-transparent border-none p-1 mx-1 focus:outline-none hover:text-cyan-300 transition-colors">
-                    {isPlaying ? <FaPause size={18} /> : <FaPlay size={18} />}
+                  <button onClick={togglePlayPause} className="bg-transparent border-none p-1 mx-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
+                    {isPlaying ? 
+                      <FaPause size={18} className="group-hover:drop-shadow-[0_0_5px_rgba(56,189,248,0.7)] transition-all duration-150 ease-in-out" /> : 
+                      <FaPlay size={18} className="group-hover:drop-shadow-[0_0_5px_rgba(56,189,248,0.7)] transition-all duration-150 ease-in-out" />}
                   </button>
-                  <button onClick={handleNextTrack} className="bg-transparent border-none p-1 focus:outline-none hover:text-cyan-300 transition-colors">
-                    <FaStepForward size={18} />
+                  <button onClick={handleNextTrack} className="bg-transparent border-none p-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
+                    <FaStepForward size={18} className="group-hover:drop-shadow-[0_0_5px_rgba(56,189,248,0.7)] transition-all duration-150 ease-in-out" />
                   </button>
-                  <div className="w-20 truncate text-xs mx-2 hidden sm:block" title={playlist[currentTrackIndex]?.title}>
-                    {/* Optional: Display current track title */}
+                  <div 
+                    className="min-w-[100px] max-w-[200px] text-xs mx-2 hidden sm:block overflow-hidden text-ellipsis whitespace-nowrap hover:overflow-visible hover:whitespace-normal hover:bg-black/20 hover:p-1 hover:rounded transition-all duration-150"
+                    title={playlist[currentTrackIndex]?.title}
+                  >
                     {playlist[currentTrackIndex]?.title || 'No Track'}
                   </div>
-                  <button onClick={toggleMute} className="bg-transparent border-none p-1 ml-1 focus:outline-none hover:text-cyan-300 transition-colors">
-                    {isMuted ? <FaVolumeMute size={18} /> : <FaVolumeUp size={18} />}
+                  <button onClick={toggleMute} className="bg-transparent border-none p-1 ml-1 focus:outline-none hover:text-cyan-300 transition-colors duration-150 ease-in-out group">
+                    {isMuted ? 
+                      <FaVolumeMute size={18} className="group-hover:drop-shadow-[0_0_5px_rgba(56,189,248,0.7)] transition-all duration-150 ease-in-out" /> : 
+                      <FaVolumeUp size={18} className="group-hover:drop-shadow-[0_0_5px_rgba(56,189,248,0.7)] transition-all duration-150 ease-in-out" />}
                   </button>
                 </div>
               )}
