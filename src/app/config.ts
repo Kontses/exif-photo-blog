@@ -12,7 +12,7 @@ export const SHOULD_PREFETCH_ALL_LINKS: boolean | undefined = undefined;
 
 // TEMPLATE META
 
-export const TEMPLATE_TITLE = 'ifeellibys';
+export const TEMPLATE_TITLE = 'I feel Libys';
 export const TEMPLATE_DESCRIPTION = 'Store photos with original camera data';
 
 // SOURCE CODE
